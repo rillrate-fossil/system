@@ -8,11 +8,14 @@ license = "Apache-2.0"
 
 [dependencies]
 anyhow = "1.0.41"
+async-trait = "0.1.50"
 derive_more = "0.99.14"
+meio = { version = "0.89.3", optional = true }
 rill-engine = { version = "0.30.0-alpha.4", optional = true }
 rill-protocol = "0.30.0-alpha.4"
 serde = "1.0.126"
+tokio = { version = "1.7.1", features = ["full"], optional = true }
 vectorize = "0.1.0"
 
 [features]
-default-features = ["rill-engine"]
+default = ["rill-engine", "tokio", "meio"]

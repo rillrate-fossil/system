@@ -816,10 +816,13 @@ name = "rillrate-system"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "async-trait",
  "derive_more",
+ "meio",
  "rill-engine",
  "rill-protocol",
  "serde",
+ "tokio",
  "vectorize",
 ]
 
