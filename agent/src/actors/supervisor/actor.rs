@@ -2,6 +2,7 @@ use anyhow::Error;
 use async_trait::async_trait;
 use meio::{Actor, Context, Eliminated, IdOf, InterruptedBy, StartedBy, System};
 use rill_engine::{EngineConfig, RillEngine};
+use rillrate_system_protocol::provider_type;
 
 pub struct Supervisor {}
 
@@ -18,7 +19,7 @@ impl Actor for Supervisor {
 #[async_trait]
 impl StartedBy<System> for Supervisor {
     async fn handle(&mut self, ctx: &mut Context<Self>) -> Result<(), Error> {
-        let engine = RillEngine::new(EngineConfig::default());
+        let engine = RillEngine::new(EngineConfig::new(provider_type()));
         ctx.spawn_actor(engine, ());
         Ok(())
     }

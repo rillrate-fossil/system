@@ -1,0 +1,18 @@
+[package]
+name = "rillrate-system"
+version = "0.1.0"
+authors = ["Denis Kolodin <deniskolodin@gmail.com>"]
+edition = "2018"
+description = "RillRate agent for system monitoring."
+license = "Apache-2.0"
+
+[dependencies]
+anyhow = "1.0.41"
+async-trait = "0.1.50"
+derive_more = "0.99.14"
+env_logger = "0.8.4"
+log = "0.4.14"
+meio = "0.89.3"
+rill-engine = "0.30.0-alpha.4"
+rillrate-system-protocol = { path = "../protocol" }
+tokio = { version = "1.7.1", features = ["full"] }
