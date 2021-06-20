@@ -6,6 +6,7 @@ description = "RillRate agent for system monitoring. Protocol."
 license = "Apache-2.0"
 
 [dependencies]
+derive_more = "0.99.14"
 rill-engine = { version = "0.30.0-alpha.6", optional = true }
 rill-protocol = "0.30.0-alpha.6"
 serde = "1.0.126"
