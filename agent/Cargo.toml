@@ -13,6 +13,6 @@ derive_more = "0.99.14"
 env_logger = "0.8.4"
 log = "0.4.14"
 meio = "0.89.3"
-rill-engine = "0.30.0-alpha.4"
+rill-engine = "0.30.0-alpha.6"
 rillrate-system-protocol = { version = "0.2.0", path = "../protocol" }
 tokio = { version = "1.7.1", features = ["full"] }
