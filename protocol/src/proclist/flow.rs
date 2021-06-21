@@ -6,7 +6,7 @@ use std::collections::BTreeMap;
 
 pub const LOCATION: Location = Location::new("system:proclist");
 
-pub type Pid = usize;
+pub type Pid = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ProcInfo {
