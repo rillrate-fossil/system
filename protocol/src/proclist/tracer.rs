@@ -17,6 +17,6 @@ impl ProclistTracer {
 
     pub fn insert(&self, pid: Pid, proc_info: ProcInfo) {
         let msg = ProclistEvent::InsertProcess { pid, proc_info };
-        self.tracer.send(msg, None);
+        self.tracer.send(msg, None, None);
     }
 }
